@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- subject %></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.4s ease-in-out;
+            scrollbar-width: thin;
+            scrollbar-color: var(--highlight-color);
+        }
+
+        .emil_card {
+            max-width: 400px;
+            width: 100%;
+            outline: 1px solid #ccc;
+            border-radius: 15px;
+            margin: 15px;
+            overflow: hidden;
+        }
+
+        .emil_card img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .title {
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+        ul {
+            padding: 0;
+        }
+        ul li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .card_body {
+            padding: 15px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .btn {
+            padding: 10px 30px;
+            background: blue;
+            color: #fff !important;
+            border-radius: 5px;
+            display: block;
+            width: max-content;
+            margin: 30px 0 0 0;
+        }
+
+        .btn:active {
+            transform: scale(0.9);
+        }
+
+        .icon {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>  
+    <div class="emil_card">
+        <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="">
+        <div class="card_body">
+            <h3 class="title"><%- subject %></h3>
+            <ul>
+                <li> Имя <b><%- firstName %></b></li>
+                <li> Клиент <b><%- client %></b></li>
+                <li> Электронная почта <b><%- email %></b></b></li>
+                <li> телефон <b><%- phone %></b></b></li>
+                <a href="tel:<%- phone %>" class="btn">Вызов</a>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
